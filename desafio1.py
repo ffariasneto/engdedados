@@ -1,3 +1,4 @@
+# Função para registrar as movimentações de depósitos e saques na conta.
 def registrar_movimentacao(tipo, valor):
     extrato.append(f"{tipo}: R$ {valor}")
 
