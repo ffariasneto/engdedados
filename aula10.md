@@ -64,3 +64,60 @@ Tuplas são estruturas de dados muito parecidas com as listas, a principal difer
 
 ## Acesso a tupla
 Praticamente igual a listas.
+
+# Conjuntos
+## Criando sets
+Um set é uma coleção que não possui objetos repetidos, usamos set para representar conjunots matemáticos ou eliminar itens duplicados de um iterável.
+
+## Acessando os  dados
+Conjuntos em Python não suportam indexação e nem fatiamento, caso queira acessar os seus valores é necessário converter o conjunto para lista.
+
+## Função enumerate
+Às vezes é necessário saber qual o índice do objeto dentro do laço for. Para isso podemos usar a função enumerate.
+
+## Métodos da classe set
+{}.union
+{}.intersection
+{}.difference
+{}.symmetric_difference
+{}.issubset
+{}.issuperset
+{}.isdisjoint
+{}.add
+{}.clear
+{}.copy
+{}.discard
+{}.pop
+{}.remove
+len
+in
+
+# Dicionários
+## Criação e acesso aos dados
+Um dicionário é um conjunto não-ordenado de pares chave:valor, onde as chaves são únicas em uma dada instância do dicionário. Dicionários são delimitados por chaves: {}, e contém uma lista de pares chave:valor separada por vírgulas.
+```
+pessoa = {"nome": "Francisco", "idade": 38}
+
+pessoa = dict(nome="Francisco", idade=38)
+
+pessoa["telefone"] = "3333-1234"
+```
+## Acesso aos dados
+## Dicionários aninhados
+Dicionários podem armazenar qualquer tipo de objeto Python como valor, desde que a chave para esse valor seja um objeto imutável como (strings e números).
+## Iterar dicionários
+A forma mais comum para percorrer os dados de um dicionário é utilziando o comando for.
+## Métodos da classe dict
+{}.clear
+{}.copy
+{}.fromkeys
+{}.get
+{}.items
+{}.keys
+{}.pop
+{}.popitem
+{}.setdefault
+{}.update
+{}.values
+in
+del
