@@ -44,14 +44,30 @@ while True:
         withdraw(cpf, reg_accounts, value=value_withdraw, extract=extract, limit=500, numb_withdraw=numb_withdraw, limit_withdraw=limit_withdraw, movements=movements)
 
     elif main == "5":
-        print("--- Extrato ---")
-        for item in extract:
-            print(item)
+        cpf = input("Informe o CPF do cliente para exibir o extrato: ")
+        found = False
+        for acc in reg_accounts:
+            if acc["Usuário"] == cpf:
+                print(f"--- Extrato da conta {acc['Núm.Conta']} ---")
+                for item in extract:
+                    print(item)
+                found = True
+                break
+        if not found:
+            print("Erro: Cliente ou conta não encontrado.")
 
     elif main == "6":
-        print("--- Movimentações ---")
-        total_movements = check_movements(movements)
-        print(f"Total de movimentações do dia: {total_movements}")
+        cpf = input("Informe o CPF do cliente para exibir as movimentações: ")
+        found = False
+        for acc in reg_accounts:
+            if acc["Usuário"] == cpf:
+                print(f"--- Movimentações da conta {acc['Núm.Conta']} ---")
+                total_movements = check_movements(movements)
+                print(f"Total de movimentações do dia: {total_movements}")
+                found = True
+                break
+        if not found:
+            print("Erro: Cliente ou conta não encontrado.")
         
     elif main == "0":
         print("Obrigado por utilizar o FTi Bank")
